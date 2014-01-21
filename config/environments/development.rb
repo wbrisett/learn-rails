@@ -26,6 +26,14 @@ LearnRails::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   
+ config.action_mailer.smtp_settings = {
+  :address   => "smtp.mandrillapp.com",
+  :port      => 587,
+  :user_name => ENV["user_name"],
+  :password  => ENV["password"]
+}
+
+# ActionMailer
   # ActionMailer Config
 config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 config.action_mailer.delivery_method = :smtp

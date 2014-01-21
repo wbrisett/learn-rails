@@ -81,7 +81,7 @@ LearnRails::Application.configure do
   config.action_mailer.smtp_settings = {
   :address   => "smtp.mandrillapp.com",
   :port      => 587,
-  :user_name => ENV["d"],
-  :password  => ENV["f"]
+  :user_name => ENV["user_name"],
+  :password  => ENV["password"]
 }
 end
